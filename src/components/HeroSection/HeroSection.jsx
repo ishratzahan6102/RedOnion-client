@@ -1,25 +1,40 @@
 import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
-import bg from '../../assets/images/bannerbackground.png'
+import { SearchBox, HeroSectionWrapper } from './hero.style';
 
 const HeroSection = () => {
     return (
-        <Box
-            sx={{
-                height: '70vh',
-                width: '100%',
-                background: `url(${bg}})`,
-                backgroundPosition: 'center',
-                backgroundSize: '115%'
-            }}>
-            <Container>
-                <Box>
-                    <Typography variant='h2' fontWeight={600}>
-                        Best Food Waiting For Your Belly
-                    </Typography>
+        <HeroSectionWrapper>
+            <Container
+                sx={{
+                    height: '100%'
+                }}>
+                <Box
+                    sx={{
+                        width: '100%',
+                        height: '100%',
+                        display: 'grid',
+                        placeItems: 'center',
+
+                    }}>
+
+                    <Box sx={{
+                        width: '50%'
+                    }}>
+                        <Typography variant='h2' fontSize='2.5rem' fontWeight={500} textAlign='center'>
+                            Best Food Waiting For Your Belly
+                        </Typography>
+
+                        <SearchBox>
+
+                            <input type='search' alt='Search Food' placeholder='Search Food' />
+                            <button>Search</button>
+                        </SearchBox>
+                    </Box>
+
                 </Box>
             </Container>
-        </Box>
+        </HeroSectionWrapper>
     );
 };
 

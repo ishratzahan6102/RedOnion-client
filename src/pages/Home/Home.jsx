@@ -1,11 +1,14 @@
 import React from 'react';
 import HeroSection from '../../components/HeroSection/HeroSection';
+import FoodCategory from '../../components/FoodCategory/FoodCategory';
+import { Stack } from '@mui/material';
 
 const Home = () => {
     return (
-       <>
-       <HeroSection></HeroSection>
-       </>
+        <Stack spacing={10}>
+            <HeroSection></HeroSection>
+            <FoodCategory></FoodCategory>
+        </Stack>
     );
 };
 
