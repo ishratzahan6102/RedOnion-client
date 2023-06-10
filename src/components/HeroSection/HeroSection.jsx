@@ -1,11 +1,23 @@
-import { Box, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
+import bg from '../../assets/images/bannerbackground.png'
 
 const HeroSection = () => {
     return (
-        <Box>
+        <Box
+            sx={{
+                height: '70vh',
+                width: '100%',
+                background: `url(${bg}})`,
+                backgroundPosition: 'center',
+                backgroundSize: '115%'
+            }}>
             <Container>
-                Hero Section
+                <Box>
+                    <Typography variant='h2' fontWeight={600}>
+                        Best Food Waiting For Your Belly
+                    </Typography>
+                </Box>
             </Container>
         </Box>
     );
