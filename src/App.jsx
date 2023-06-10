@@ -3,6 +3,8 @@ import './App.css'
 import CssBaseline from '@mui/material/CssBaseline';
 import Layout from './components/Layout'
 import Home from './pages/Home/Home'
+import { ThemeProvider } from '@emotion/react';
+import { theme } from './components/theme/theme';
 
 
 
@@ -24,12 +26,14 @@ function App() {
  
 
   return (
-    <>
-      <div >
+
+    <ThemeProvider theme={theme}>
+        <div className='App'>
         <CssBaseline></CssBaseline>
         <RouterProvider router={router}></RouterProvider>
       </div>
-    </>
+    </ThemeProvider>
+  
   )
 }
 
