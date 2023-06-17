@@ -6,6 +6,8 @@ import { styled } from '@mui/material'
 
 const CustomTabs = styled(Tabs)(({ theme }) => ({
   padding: '5px',
+  boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" ,
+  
   '& .MuiTabs-flexContainer': {
     justifyContent: 'space-between'
   },
@@ -15,28 +17,37 @@ const CustomTabs = styled(Tabs)(({ theme }) => ({
     color: '#000',
 
     '&:hover': {
-      color: theme.palette.primary.main
+      // color: theme.palette.primary.main
     }
   },
+
+  '& .Mui-selected' : {
+    background: theme.palette.primary.main ,
+    color: '#ffffff !important' ,
+    borderRadius: '15px'
+  },
+
+  '& .MuiTabs-indicator' : {
+    display: 'none'
+  }
 
 }))
 
 
 
-export default function TabButtons() {
-  const [value, setValue] = React.useState(0);
-
+export default function TabButtons({value, setValue}) {
+ 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
     <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
-      <Tabs value={value} onChange={handleChange} centered>
-        <Tab label="Item One" />
-        <Tab label="Item Two" />
-        <Tab label="Item Three" />
-      </Tabs>
+      <CustomTabs value={value} onChange={handleChange} centered>
+        <Tab label="Breakfast" />
+        <Tab label="Lunch" />
+        <Tab label="Dinner" />
+      </CustomTabs>
     </Box>
   );
 }
