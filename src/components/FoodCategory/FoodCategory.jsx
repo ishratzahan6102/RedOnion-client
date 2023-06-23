@@ -12,6 +12,7 @@ const FoodCategory = () => {
     const [value, setValue] = React.useState(0);
 
     const { meals, loading } = useMeals(categories[value])
+   
     return (
         <Box>
 
@@ -24,13 +25,14 @@ const FoodCategory = () => {
                 </Box>
                 <Box sx={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(345px, 1fr))',
                     justifyItems: 'center',
                     gap: '20px',
-                    mt: 8
+                    mt: 8,
+                    
                 }}
                 >
-                    {!loading && meals?.map(meal => <FoodCart meal={meal}></FoodCart>)}
+                    {!loading && meals?.map(meal => <FoodCart meal={meal} key={meal._id}></FoodCart>)}
                     {loading && Array.from(new Array(6)).map((item) => (
                          <Box sx={{width: 350}}>
                          <Skeleton

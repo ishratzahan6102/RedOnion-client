@@ -4,7 +4,7 @@ import { SearchBox, HeroSectionWrapper } from './hero.style';
 
 const HeroSection = () => {
     return (
-        <HeroSectionWrapper>
+        <HeroSectionWrapper >
             <Container
                 sx={{
                     height: '100%'
@@ -19,7 +19,7 @@ const HeroSection = () => {
                     }}>
 
                     <Box sx={{
-                        width: '50%'
+                        width: '100%'
                     }}>
                         <Typography variant='h2' fontSize='2.5rem' fontWeight={500} textAlign='center'>
                             Best Food Waiting For Your Belly

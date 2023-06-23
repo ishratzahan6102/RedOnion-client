@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 const FoodCart = ({ meal }) => {
- console.log(meal)
+
     const navigate = useNavigate()
     return (
         <Box

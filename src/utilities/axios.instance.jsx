@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'http://localhost:5000/';
+const baseURL = 'https://red-onion-server-tau.vercel.app/';
 // const baseURL = 'server url'
 const headers =  {
     'Content-Type' : 'application/json' ,
